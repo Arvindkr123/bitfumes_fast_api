@@ -5,13 +5,19 @@ app = FastAPI();
 @app.get("/")
 def index():
     return {
-        'data':{
-            'name':'arvind'
-        }
+        'data':'blog list'
     }
     
-@app.get("/about")
-def about():
+@app.get("/blog/{id}")
+def about(id):
     return {
-        'data':'about page'
+        'data':f'blog {id}'
+    }
+
+@app.get('/blog/{id}/comments')
+def comments(id):
+    return {
+        'data':{
+            '1','2'
+        }
     }
