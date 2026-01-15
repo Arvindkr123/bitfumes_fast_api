@@ -12,6 +12,7 @@ class BlogCreate(Blog):
 
 
 class ShowBlog(BaseModel):
+    id:int
     title: str
     body: str
     creator: Optional["User"] = None
